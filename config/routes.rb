@@ -1,6 +1,5 @@
 Umbrellas::Application.routes.draw do
       
-  root "pages#home"
-  
-  get "/home", to: "pages#home", as: "home"
+  root "weather_reports#new"
+  post "/report", to: "weather_reports#results"
 end

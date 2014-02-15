@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
+
+gem 'forecast_io'
+gem 'geokit'
 gem 'rails', '4.0.2'
 gem 'sass-rails', '~> 4.0.1'
 gem 'uglifier', '~> 2.4.0'
@@ -44,4 +47,8 @@ end
 # Capybara
 group :test do
   gem "capybara", '~> 2.2.1'
+end
+
+group :production do
+	gem 'pg'
 end
