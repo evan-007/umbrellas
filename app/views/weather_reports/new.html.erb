@@ -1,8 +1,8 @@
 <h2>Need an Umbrella?</h2>
-<%= form_tag("/report", method: "post") do %>
+<%= form_tag('/report') do %>
 
 	<%= label_tag(:place, "Where you at?") %>
-	<%= text_field_tag(:place) %>
-	<%= submit_tag("Umbrellllassss?") %>
+	<%= text_field_tag(:place, nil) %>
+	<%= submit_tag "Umbrellllassss?" %>
 
 <% end %>
