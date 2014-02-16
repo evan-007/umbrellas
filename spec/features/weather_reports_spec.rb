@@ -8,4 +8,8 @@ feature "Weather reports" do
 			expect(page).to have_content('The weather is:')
 		end
 	end
+
+	context "with invalid place name" do
+		scenario "renders #New form"
+	end
 end

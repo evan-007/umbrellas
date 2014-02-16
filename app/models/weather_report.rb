@@ -10,6 +10,14 @@ class WeatherReport
 	end
 
 	def get_weather
-		ForecastIO.forecast(ll[0], ll[1]).currently.summary
+		ForecastIO.forecast(ll[0], ll[1]).hourly.summary
+	end
+
+	def raining?
+		self.get_weather.include? "rain"
+	end
+
+	def umbrella?
+		self.raining?
 	end
 end
