@@ -10,7 +10,6 @@ Timezone::Configure.begin do |c|
   c.username = 'evan007'
 end
   
-config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
 
 
 module Umbrellas
@@ -32,6 +31,7 @@ module Umbrellas
     
     # Test framework
     config.generators.test_framework false
-    
+    config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+
   end
 end
