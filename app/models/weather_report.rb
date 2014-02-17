@@ -1,16 +1,16 @@
 class WeatherReport
-	attr_reader :place
+	attr_reader :location
 
-	def initialize(place)
-		@place = place
+	def initialize(location)
+		@location = location
 	end
 
 	def ll
-		(Geokit::Geocoders::GoogleGeocoder.geocode "#{place}").ll.split(',')
+		(Geokit::Geocoders::GoogleGeocoder.geocode "#{location}").ll.split(',')
 	end
 
 	def get_weather
-		ForecastIO.forecast(ll[0], ll[1]).hourly.summary
+    ForecastIO.forecast(ll[0], ll[1]).hourly.icon
 	end
 
 	def raining?

@@ -3,8 +3,6 @@ class WeatherReportsController < ApplicationController
 	end
 
 	def report
-		place = params[:place].to_s
-		@place = place
-		@report = WeatherReport.new(params[:place]).get_weather
+		@report = WeatherReport.new(params[:location]).get_weather
 	end
 end
