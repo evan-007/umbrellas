@@ -9,6 +9,9 @@ Bundler.require(:default, Rails.env)
 Timezone::Configure.begin do |c|
   c.username = 'evan007'
 end
+  
+config.assets.precompile += %w(*.png *.jpg *.jpeg *.gif)
+
 
 module Umbrellas
   class Application < Rails::Application
