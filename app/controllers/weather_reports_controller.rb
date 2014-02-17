@@ -1,6 +1,9 @@
 class WeatherReportsController < ApplicationController
 	def new
 	end
+  
+  def about
+  end
 
 	def report
     @report = WeatherReport.new(params[:location])
