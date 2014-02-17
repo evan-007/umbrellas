@@ -1,8 +1,12 @@
-<h2>Need an Umbrella?</h2>
+<div class="jumbotron">
+<h1>Need an Umbrella today?</h1>
 <%= form_tag('/report') do %>
 
 	<%= label_tag(:location, "Where you at?") %>
 	<%= text_field_tag(:location) %>
-	<%= submit_tag "Go!" %>
+  <%= submit_tag "Go!", class: "btn btn-primary btn-lg" %>
 
 <% end %>
+</div>
+
+ 

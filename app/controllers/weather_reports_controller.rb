@@ -3,6 +3,12 @@ class WeatherReportsController < ApplicationController
 	end
 
 	def report
-		@report = WeatherReport.new(params[:location]).get_weather
+    @report = WeatherReport.new(params[:location])
+    unless @report.ll == []
+      @umbrella = @report.umbrella?
+    else
+      flash[:notice] = "#{params[:location]} is not valid!"
+      render :new
+    end
 	end
 end

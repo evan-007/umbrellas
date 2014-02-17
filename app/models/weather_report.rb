@@ -20,4 +20,12 @@ class WeatherReport
 	def umbrella?
 		self.raining?
 	end
+  
+  def timezone
+    NearestTimeZone.to(ll[0].to_f, ll[1].to_f)
+  end
+  
+  def user_time
+    Timezone::Zone.new(zone: timezone).time Time.now
+  end
 end

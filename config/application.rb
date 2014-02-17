@@ -6,6 +6,10 @@ require 'rails/all'
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
 
+Timezone::Configure.begin do |c|
+  c.username = 'evan007'
+end
+
 module Umbrellas
   class Application < Rails::Application
     # Settings in config/environments/* take precedence over those specified here.

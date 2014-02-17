@@ -1,2 +1,8 @@
-The weather is:
-<%= @report %>
+<div class="jumbotron">
+<% if @report == true %>
+    <%= image_tag("umbrella.png") %>
+<% else %>
+  <h1>Nope, not today!</h1>
+<% end %>
+  <%= link_to "Try again?", root_path, class: "btn btn-primary btn-default" %>
+</div>
