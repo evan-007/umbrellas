@@ -53,5 +53,4 @@ end
 
 group :production do
 	gem 'pg'
-  gem 'rails_layout', '~> 0.5.11'
 end
