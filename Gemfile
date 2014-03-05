@@ -1,6 +1,8 @@
 source 'https://rubygems.org'
 ruby '2.0.0'
 
+
+gem "font-awesome-rails"
 gem 'timezone'
 gem 'nearest_time_zone'
 gem 'forecast_io'
